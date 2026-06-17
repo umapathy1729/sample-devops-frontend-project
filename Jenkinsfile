@@ -67,13 +67,13 @@ pipeline {
         stage('harbor login') {
             steps {
                 withCredentials([usernamePassword(
-                    credentialsId: 'harbor_creds', 
+                    credentialsId: 'harbor-creds', 
                     passwordVariable: 'HARBOR_PASS', 
                     usernameVariable: 'HARBOR_USER')]) {
                     
                     // Added http:// explicitly right here to force HTTP instead of HTTPS
                     sh '''
-                        echo "$HARBOR_PASS" | docker login ${HARBOR_URL} \
+                        echo "$HARBOR_PASS" | docker login http://${HARBOR_URL} \
                         -u "$HARBOR_USER" --password-stdin
                     ''' 
                 } 
