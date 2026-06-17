@@ -1,5 +1,3 @@
-Project:
-
 pipeline {
     agent any
     environment {
