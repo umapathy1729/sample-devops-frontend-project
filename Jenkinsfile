@@ -73,7 +73,7 @@ pipeline {
                     
                     // Added http:// explicitly right here to force HTTP instead of HTTPS
                     sh '''
-                        echo "$HARBOR_PASS" | docker login http://${HARBOR_URL} \
+                        echo "$HARBOR_PASS" | docker login ${HARBOR_URL} \
                         -u "$HARBOR_USER" --password-stdin
                     ''' 
                 } 
