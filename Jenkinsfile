@@ -18,9 +18,11 @@ pipeline {
 
     stage('Run & build') {
       steps {
+        sh '''
         rm -rf node_modules package_lock.json
         npm install --legacy-peer-deps || true
         npm run build
+        '''
       }
     }
 
