@@ -34,7 +34,7 @@ pipeline {
           '''
         }
       }
-
+    }
       stage('Cloudfront') {
         steps {
           withCredentials([aws(accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'secret', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
