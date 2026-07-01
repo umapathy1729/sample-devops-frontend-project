@@ -12,7 +12,7 @@ pipeline {
       steps {
         git branch: 'master',
         credentialsId: 'Github-credentials'
-        url : 'https://github.com/umapathy1729/sample-devops-frontend-project.git'
+        url: 'https://github.com/umapathy1729/sample-devops-frontend-project.git'
       }
     }
 
