@@ -11,8 +11,8 @@ pipeline {
     stage('Git clone') {
       steps {
         git branch: 'master',
-        credentialsId: 'Github_credentials'
-        url : ''
+        credentialsId: 'Github-credentials'
+        url : 'https://github.com/umapathy1729/sample-devops-frontend-project.git'
       }
     }
 
